@@ -1,0 +1,546 @@
+QLineEdit {
+    selection-background-color: darkgray;   /*Select word background color*/
+    lineedit-password-character: 1422;      /*Password input box as an asterisk*/
+}
+
+/*Main window*/
+#widgetMain {
+    border-radius: 4px;    /*Window outermost rounded*/
+    background: rgba(39, 174, 97, 255);    /*background color*/
+}
+
+/*title*/
+#widgetTitlebar {
+    min-height: 36px;
+    max-height: 36px;
+    /*The upper corner of the upper left corner of the title column (consistent with the rounded corners of the main window)*/
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+/*Button in the title bar*/
+#buttonSkin, #buttonIssues, #buttonMinimum, #buttonMaximum, #buttonNormal, #buttonClose {
+    /*Define the minimum maximum high*/
+    min-width: 36px;
+    max-width: 36px;
+    min-height: 36px;
+    max-height: 36px;
+    font-family: "pyqtclient";    /*Use custom fonts*/
+    border: none;    /*Rimless*/
+    color: white;   /*Text color*/
+    font-size: 16px;
+    background: transparent; /*Background transparent*/
+}
+/*Button hover effect in the title bar*/
+#buttonSkin:hover, #buttonIssues:hover, #buttonMinimum:hover, #buttonMaximum:hover, #buttonNormal:hover, #buttonClose:hover {
+    background-color: rgba(255, 255, 255, 100); /*With transparency white background*/
+}
+
+/*Close button Hover Display Other Colors*/
+#buttonClose:hover {
+    background-color: rgba(212, 64, 39, 255); /*Red*/
+}
+
+/*Modify the text of the button in the title bar*/
+#buttonSkin {
+    font-size: 22px;
+    font-weight: bold;
+    qproperty-text: "\2104";
+}
+#buttonIssues {
+    qproperty-text: "\5104";
+}
+#buttonMinimum {
+    qproperty-text: "\2100";
+}
+#buttonMaximum {
+    qproperty-text: "\2101";
+}
+#buttonNormal {
+    qproperty-text: "\2102";
+}
+#buttonClose {
+    qproperty-text: "\2103";
+    /*Close the button in the upper right corner of the button (keeping the main window)*/
+    border-top-right-radius: 4px;
+}
+
+/*Latest directory area*/
+#widgetCatalogs {
+    min-width: 260px;
+    max-width: 260px;
+    /*There is a rounded corner in the lower left corner (keeping the main window)*/
+    border-bottom-left-radius: 4px;
+    /*Water corrugation progress*/
+    qproperty-waterHeight: 0.6;
+    qproperty-waterFgColor: rgba(255, 255, 255, 80);
+    qproperty-waterBgColor: rgba(255, 255, 255, 50);
+}
+
+/*Round avatar*/
+#buttonHead {
+    outline: none;
+    border: none;
+    min-width: 130px;
+    min-height: 130px;
+    max-width: 130px;
+    max-height: 130px;
+    background: transparent;
+    qproperty-shadowColor: rgba(255, 255, 255, 255);
+    qproperty-image: "Resources/Images/Avatars/avatar.png";
+}
+
+/*search bar*/
+#widgetSearch {
+    min-height: 32px;
+    max-height: 32px;
+    background-color: rgba(255, 255, 255, 255);
+    border-radius: 15px;
+}
+
+/*Search box in the input box*/
+#lineEditSearch {
+    width: 220px;
+    height: 32px;
+    border: none;
+    color: rgba(102, 102, 102, 255);
+    background: rgba(255, 255, 255, 255);
+    outline: none;
+    /*Set the left and right margins*/
+    padding-left: 10px;
+    padding-right: 5px;
+    /*Set the rounded and parent controls*/
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+/*Search the button in the box*/
+#buttonClear {
+    min-width: 26px;
+    max-width: 26px;
+    min-height: 26px;
+    max-height: 26px;
+    border: none;
+    color: white;
+    qproperty-bgColor: rgba(39, 174, 97, 255);
+    outline: none;
+    font-family: "pyqtclient";
+    qproperty-text: "\2103";
+}
+
+/*Directory tree*/
+#treeViewCatalogs {
+    outline: none;  /*Remove the dashed box*/
+    border: none;       /*Rimless*/
+    color: rgba(255, 255, 255, 200);
+    font-weight: bold;
+    background: transparent;    /*Background transparent*/
+}
+
+#treeViewCatalogs::item {
+    min-height: 36px;
+    border-radius: 8px;
+}
+
+#treeViewCatalogs::item:hover {
+    color: rgba(255, 255, 255, 255);
+    background: rgba(217, 217, 217, 100);
+}
+
+#treeViewCatalogs::item:selected {
+    color: rgba(255, 255, 255, 255);
+    background: rgba(217, 217, 217, 100);
+}
+
+#treeViewCatalogs::item:selected:active{
+    color: rgba(255, 255, 255, 255);
+    background: rgba(217, 217, 217, 100);
+}
+
+#treeViewCatalogs::item:selected:!active {
+    color: rgba(255, 255, 255, 200);
+    background: rgba(217, 217, 217, 50);
+}
+
+/*toolbar*/
+#widgetTools {
+    min-width: 60px;
+    max-width: 60px;
+    background-color: rgba(38, 38, 38, 255);
+}
+/*Button in the toolbar*/
+#buttonGithub, #buttonQQ, #buttonGroup {
+    min-width: 36px;
+    max-width: 36px;
+    min-height: 36px;
+    max-height: 36px;
+    border-radius: 18px;
+    border: none;
+    color: white;
+    outline: none;
+    font-family: "pyqtclient";
+    font-size: 20px;
+    background: rgba(46, 46, 46, 255);
+    qproperty-shadowColor: rgba(255, 255, 255, 255);
+}
+
+/*Github button*/
+#buttonGithub {
+    qproperty-text: "\5102";
+}
+#buttonGithub:hover {
+    background: rgba(14, 134, 174, 255);
+}
+/*QQ button*/
+#buttonQQ {
+    font-weight: bold;
+    qproperty-text: "\4101";
+}
+#buttonQQ:hover {
+    background: rgba(255, 180, 97, 255);
+}
+/*QQ group button*/
+#buttonGroup {
+    font-weight: bold;
+    qproperty-text: "\4100";
+}
+#buttonGroup:hover { 
+    background: rgba(232, 76, 61, 255);
+}
+
+/*Back to top button*/
+#buttonHome, #buttonBackToUp {
+    min-width: 36px;
+    max-width: 36px;
+    min-height: 36px;
+    max-height: 36px;
+    border: none;
+    color: rgba(255, 255, 255, 255);
+    qproperty-bgColor: rgba(39, 174, 97, 255);
+    outline: none;
+    font-family: "pyqtclient";
+}
+
+/*Show homepage readme*/
+#buttonHome {
+    qproperty-text: "\5103";
+}
+#buttonBackToUp {
+    qproperty-text: "\5101";
+}
+
+/*Store web control*/
+#widgetContents {
+    background: rgb(248, 248, 248);
+    border-bottom-right-radius: 4px;
+}
+/*Web background transparent*/
+#webViewContent {
+    background: transparent;
+}
+
+/*Imitation Tooltip Window*/
+ToolTip > QLabel {
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(77, 77, 77, 180);
+}
+
+/*Dialog Title Bar*/
+#dialogTitlebar {
+    /*The upper corner of the upper left corner of the title column (consistent with the rounded corners of the main window)*/
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+/*Login window*/
+#widgetLogin {
+    border: 1px solid rgba(44, 144, 92, 255);
+    border-radius: 4px;    /*Window outermost rounded*/
+    background: rgba(64, 187, 107, 255);    /*background color*/
+}
+/*Active state*/
+#widgetLogin[_active="true"] {
+    border: 1px solid rgba(44, 144, 92, 255);
+}
+/*Non-activated state*/
+#widgetLogin[_active="false"] {
+    border: 1px solid transparent; /*Transparent border*/
+}
+
+/*Login window input box*/
+#lineEditAccount, #lineEditPassword {
+    /*Set the left and right margins*/
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(255, 255, 255, 255);
+    border-radius: 12px;
+}
+#lineEditPassword[echoMode="2"] {
+    lineedit-password-character: 1422;
+}
+
+/*Login box message prompt text*/
+#labelNotice {
+    color: red;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/*Login button*/
+#buttonLogin {
+    border: none;
+    background-color: rgba(255, 255, 255, 255);
+    border-radius: 12px;
+    qproperty-circleColor: rgb(230, 230, 230);
+}
+#buttonLogin:hover {
+    background-color: rgba(240, 240, 240, 255);
+}
+#buttonLogin:pressed {
+    background-color: rgba(230, 230, 230, 255);
+}
+
+/*Donation, update, error, theme window*/
+#widgetDonate, #widgetUpdate, #widgetError, #widgetSkin {
+    border: 1px solid rgba(39, 174, 97, 255);
+    border-radius: 4px;    /*Window outermost rounded*/
+    background: rgba(64, 187, 107, 255);    /*background color*/
+}
+/*Donate window, update window, error, theme window background*/
+#widgetImage, #widgetUpdateBg, #widgetErrorBg, #widgetSkinBg {
+    border: 1px solid rgba(39, 174, 97, 255);
+    border-top: none;
+    background: rgba(235, 235, 235, 255);    /*background color*/
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+#widgetSkinBg {
+    background: rgba(255, 255, 255, 255);    /*background color*/
+}
+#dialogTitlebar > #labelTitle {
+    color: white;
+}
+/*Update details*/
+#plainTextEditDetail, #plainTextEditPip {
+    background: transparent;
+}
+/*Update progress bar*/
+#progressBarUpdate::chunk {
+    background-color: rgba(39, 174, 97, 255);
+}
+
+/*pip button*/
+#buttonInstall {
+    border: none;
+    padding: 4px 10px;
+    min-height: 36px;
+    max-height: 36px;
+    border-radius: 4px;
+    background: rgba(64, 187, 107, 255);    /*background color*/
+}
+#buttonInstall:hover {
+    background: rgba(64, 187, 107, 150);
+}
+#buttonInstall:pressed {
+    background: rgba(64, 187, 107, 200);
+}
+/*pip input box*/
+#lineEditPip {
+    border: none;
+    min-height: 28px;
+    border-radius: 4px;
+}
+
+/*Theme Select Tab Tags*/
+#scrollArea, #scrollAreaWidgetContents {
+    background: transparent;
+}
+#tabWidgetSkinMain::pane {
+    border-top: 1px solid rgba(240, 240, 240, 255);
+}
+#tabWidgetSkinMain > QTabBar::tab {
+    color: rgb(140, 140, 140);
+    font-size: 20px;
+    min-width: 120px;
+    min-height: 50px;
+    background: transparent;
+}
+#tabWidgetSkinMain > QTabBar::tab:hover {
+    color: black;
+}
+#tabWidgetSkinMain > QTabBar::tab:selected {
+    color: rgb(39, 174, 97);
+    border-bottom: 2px solid rgb(39, 174, 97);
+}
+
+/*Topic picture tab tag*/
+#widgetCategories > QPushButton {
+    border: none;
+    color: rgb(140, 140, 140);
+    min-height: 26px;
+    background: transparent;
+}
+#widgetCategories > QPushButton:hover {
+    color: black;
+}
+#widgetCategories > QPushButton:checked {
+    color: rgb(39, 174, 97);
+}
+
+/*Topic transparency adjustment*/
+#sliderOpacity::add-page:horizontal {
+    background-color: transparent;
+}
+#sliderOpacity::groove:horizontal {
+    height: 4px;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, stop:0 rgba(19, 183, 245, 255), stop:1 rgba(255, 255, 255, 255));
+}
+#sliderOpacity::handle:horizontal {
+    width: 20px;
+    height: 20px;
+    margin-top: -9px;
+    margin-bottom: -9px;
+    border-radius: 10px;
+    background-color: qradialgradient(spread:pad, cx:0.5, cy:0.5, radius:0.5, fx:0.5, fy:0.5, stop:0.9 rgba(255, 255, 255, 255), stop:1 rgba(19, 183, 245, 255));
+}
+
+/*Reset the default theme button*/
+#buttonRestore {
+    border: 1px solid rgba(216, 218, 219, 255);
+    background: rgba(255, 255, 255, 255);
+    font-size: 18px;
+    min-height: 36px;
+    padding: 0px 10px;
+    border-radius: 4px;
+}
+#buttonRestore:hover {
+    background: rgba(239, 239, 240, 255);
+}
+#buttonRestore:pressed {
+    background: rgba(225, 226, 227, 255);
+}
+
+/*Wallpaper control progress bar*/
+PictureWidget {
+    /*Circle color*/
+    qproperty-circleColor: rgb(39, 174, 97);
+}
+
+/*Topic interface thumbnail control text hover color*/
+#skinBaseItemWidget {
+    qproperty-textHoverColor: rgb(39, 174, 97);
+}
+
+/*Theme preview interface*/
+#FormPreviewWidget {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: rgba(255, 255, 255, 240);
+}
+#buttonPreviewPrevious, #buttonPreviewNext, #buttonPreviewClose {
+    min-width: 48px;
+    max-width: 48px;
+    min-height: 48px;
+    max-height: 48px;
+    color: rgb(181, 182, 185);
+    font-family: "pyqtclient";
+    font-size: 40px;
+    border: none; /*Rimless*/
+    background: transparent; /*Background transparent*/
+}
+#buttonPreviewPrevious:hover,#buttonPreviewNext:hover, #buttonPreviewClose:hover {
+    color: rgb(118, 122, 126);
+}
+#buttonPreviewPrevious:pressed,#buttonPreviewNext:pressed, #buttonPreviewClose:pressed {
+    color: rgb(27, 36, 42);
+}
+
+#buttonPreviewPrevious {
+    qproperty-text: "\5106";
+}
+#buttonPreviewNext {
+    qproperty-text: "\5107";
+}
+#buttonPreviewClose {
+    qproperty-text: "\5105";
+}
+#buttonPreviewApply {
+    color: white;
+    font-size: 20px;
+    font-family: "Microsoft";
+    min-height: 35px;
+    min-width: 120px;
+    border: none;
+    border-radius: 2px;
+    background: rgb(39, 174, 97);
+}
+#buttonPreviewApply:hover {
+    background: rgba(39, 174, 97, 200);
+}
+#buttonPreviewApply:pressed {
+    background: rgba(39, 174, 97, 230);
+}
+
+/*Rolling strip style*/
+QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+    border-radius: 4px;
+    margin: 0px 0px 0px 0px;
+}
+
+QScrollBar::handle:vertical {
+    background: rgba(208, 208, 208, 150);
+    width: 8px;
+    border-radius: 4px;
+    border: none;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: rgba(208, 208, 208, 255);
+}
+
+/*Set part of the area on the slider*/
+QScrollBar::sub-page:vertical {
+    width: 8px;
+    background: transparent;
+}
+
+/*Set part of the area under the slider*/
+QScrollBar::add-page:vertical {
+    width: 8px;
+    background: transparent;
+}
+
+/*Set top arrows*/
+QScrollBar::sub-line:vertical {
+    height: 1px;
+    border-image: none;
+    background: transparent;
+    subcontrol-position: top;
+}
+
+/*Set the bottom arrow*/
+QScrollBar::add-line:vertical {
+    height: 1px;
+    border-image: none;
+    background: transparent;
+    subcontrol-position:bottom;
+}
+
+/*menu*/
+QMenu {
+    color: black;
+    border: 0px solid rgb(255, 255, 255);
+    background: rgb(255, 255, 255);
+}
+QMenu::item {
+    padding: 8px 30px;
+    border-bottom: 1px solid rgba(200, 200, 200, 255);
+}
+QMenu::item:selected {
+    color: white;
+    background: rgba(39, 174, 97, 200);
+}
